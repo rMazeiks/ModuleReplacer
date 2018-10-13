@@ -1,0 +1,54 @@
+body {
+    background: #444;
+    padding: 2em;
+}
+
+.content {
+    background: #eee;
+    border-radius: 4px;
+}
+
+img  {
+    max-height: 500px;
+    margin:1em;
+    border-radius: 4px;
+}
+
+.detail  {
+    opacity: 0.5;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+}
+
+.detail:hover  {
+    opacity: 1;
+}
+
+.content > * {
+    margin: 2em;
+}
+
+.tool {
+    background: #FFF;
+    border-radius: 4px;
+    padding: 2em;
+}
+
+.content > *:last-child {
+    padding-bottom: 5em;
+}
+
+.content h1 {
+    margin: 0;
+    padding: 2em;
+    border-radius: 4px 4px 0 0;
+    background: #008fca;
+    color: #fff;
+}
+
+.content h2 {
+    margin: 0;
+    padding: 2em;
+    background: #b5e3ff;
+    /*color: #fff;*/
+}

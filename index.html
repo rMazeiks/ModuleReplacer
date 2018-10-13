@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Replacer</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fonts.css">
+
+    <script src="main.js"></script>
+</head>
+<body>
+<div class="content">
+
+    <h1>The Great Replacer</h1>
+    <section>
+        <p>
+            Replaces course codes with course names for exporting the Minerva timetable to other calendars.
+        </p>
+        <div class="tool">
+            <p>Input:</p>
+            <textarea title="input" id="input"></textarea>
+            <p>Output:</p>
+            <textarea title="output" id="output"></textarea>
+        </div>
+    </section>
+
+    <h2>What is this?</h2>
+    <section>
+        <p>
+            By default, when Minerva timetables are imported into another calendar (like Google calendar), they have the
+            module codes in the event titles:
+        </p>
+        <img src="img/before.png">
+        <p>
+            The Great Replacer can replace these module codes with the actual module names for you (e.g. COMP1711 is
+            replaced by "Procedural Programing"). It's a really simple tool, but I needed it badly.
+        </p>
+        <img src="img/after.png">
+        <p class="detail">Note: if you simply want your calendar to look better, and don't need to import it anywhere, I suggest you try <a href="https://usamausman.github.io/timetable/">Usama's Timetable tool</a>. </p>
+    </section>
+
+    <h2>Instructions</h2>
+    <section>
+        <ol>
+            <li>Go to <a href="http://minerva.leeds.ac.uk">Minerva</a>. Log in if prompted.</li>
+            <li>Click "View your timetable" at the top right corner
+                <br>
+                <img src="img/viewYourTimetable.png" width="300"></li>
+            <li>Choose "Semester view"</li>
+            <li>Click "Download an iCal file". When the file is created, click "Click here".
+                <br>
+                <p class="detail">(At this point, you can import the file into your calendar. However, you will see annoying module codes
+                    instead of module names)</p>
+            </li>
+            <li>Open the downloaded file in a text editor. Copy the contents of the file into the input section.</li>
+            <li>The output section is automatically updated soon. Copy the contents of the output section back into the text editor.</li>
+            <li>Save the file, with the same <code>.ics</code> extension.</li>
+            <li>Import the <code>.ics</code> file into your calendar</li>
+        </ol>
+        <p><a href="https://support.google.com/calendar/answer/37118?hl=en">Import events to Google Calendar</a></p>
+        <p><a href="https://support.office.com/en-us/article/import-or-subscribe-to-a-calendar-in-outlook-com-cff1429c-5af6-41ec-a5b4-74f2c278e98c#bkmk_classic">Import a calendar in Outlook</a></p>
+    </section>
+
+    <h2>How does it work?</h2>
+    <section>
+        <p>
+            There is some really simple javascript that goes through a lookup table and simply replaces strings. The
+            lookup
+            table was scrapped with another script from the University of Leeds website.
+        </p>
+    </section>
+</div>
+</body>
+</html>
